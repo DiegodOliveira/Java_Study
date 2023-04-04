@@ -1,35 +1,35 @@
+package br.com.fiap.banco;
 public class Conta {
-    private String titular;
-    private double saldo;
+    //Atributos de classe
+    int numero;
+    int agencia;
+    double saldo;
 
-    public Conta(String titular) {
-        this.titular = titular;
-        this.saldo = 0.0;
+    //Construtores da classe Conta
+    public Conta(){
+
     }
 
-
-    public void depositar(double valor){
-        this.saldo += valor;
-        System.out.println("Deposito de R$" + valor+" realizado. Saldo atual de R$" + saldo);
+    public Conta(int numero, int agencia, double saldo){
+        this.numero = numero;
+        this.agencia = agencia;
+        this.saldo = saldo;
     }
 
-    public void sacar(double valor){
-        if(this.saldo < valor){
-            System.out.println("Saldo insuficiente, peça um empréstimo!");
-        }else{
-            this.saldo -= valor;
-        }
+    /**
+     * Acrescentar valor ao saldo
+     * @param valor a ser depositado
+    */
+
+    public void depositar (double valor){
+         this.saldo += valor;
     }
 
-    public void setTitular(){
-        this.titular = titular;
+    public void retirar(double valor){
+        this.saldo -= valor;
     }
 
-    public String getTitular(){
-        return titular;
-    }
-
-    public double getSaldo() {
+    public double verificarSaldo(){
         return saldo;
     }
 }
