@@ -1,2 +1,2 @@
 # Java studies
-In this repository you can my progression in Java
+In this repository you can see my progression in Java
